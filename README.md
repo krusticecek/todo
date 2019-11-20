@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ✅ To-DO ✅
 
-## Available Scripts
+A list of errands and other tasks – often written on a piece of paper as a memory aid – that one needs or intends to accomplish  
 
-In the project directory, you can run:
+## Assignment
 
-### `yarn start`
+Create a To-Do list  
+This assignment is loosely described on purpose. You can either create a very basic, or a very advanced app.  
+ALTOUGH, it should contain basic functionality, such as:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Add a To-Do
+* Edit a To-Do
+* Remove a To-Do
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+A more detailed description of what the Pomodoro technique actually is can be [found here](https://lifehacker.com/productivity-101-a-primer-to-the-pomodoro-technique-1598992730)  
 
-### `yarn test`
+This project is a variation of the `freshj/Cards` repository meant to reFRESH (pun intended) basic CRUD operations in React
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Remember, the diffuculty level is totally up to you, so feel free to experiment!
+Good luck! 🍀
 
-### `yarn build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+What things you need to install the software and how to install them
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
+NodeJS
+Yarn
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installing
 
-### `yarn eject`
+A step by step series of examples that tell you how to get a development env running
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+1. Navigate to the project root in your console
+2. yarn
+3. yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contribution guidelines
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Create a branch in this repo with your name
+2. push your solution to the branch :)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Deployment notes
+Your branches are automatically built and deployed via Netlify.  
+To access them, simply type `your-branch-name--fjs-todo.netlify.com` in your browser.
 
-## Learn More
+## Authors
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- \*\*\*\* - _Initial work_ - [Matus Giertl](https://github.com/MattGiertl)
+- \*\*\*\* - _Co-star_ - [Patrik Sterba](https://github.com/patrikSterbic)
