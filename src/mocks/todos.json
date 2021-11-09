@@ -1,27 +1,7 @@
 [
   {
-    "id": 0,
-    "todos": "pokus",
-    "description": "hO."
-  },
-  {
     "id": 1,
-    "todos": "jedna",
-    "description": "Cloud bread."
-  },
-  {
-    "id": 2,
-    "todos": "Dva",
-    "description": "Chskym?."
-  },
-  {
-    "id": 3,
-    "todos": "tri",
-    "description": "Wolf."
-  },
-  {
-    "id": 4,
-    "todos": "ctyri",
-    "description": "Hammock"
+    "name": "Test",
+    "description": "PLS work."
   }
 ]

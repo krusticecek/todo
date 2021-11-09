@@ -1,73 +1,106 @@
 import { useState } from "react";
 import "./App.css";
 import ToDoData from "./mocks/todos.json";
+import Card from "./Components/Card";
 
 function App() {
-  const [todos, setTodos] = useState(ToDoData);
+  const [cards, setCards] = useState(ToDoData);
+  const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [todo, setTodo] = useState("");
-  const [editedTodo, setEditedTodo] = useState("");
   const [editedId, setEditedId] = useState(0);
+  const [editedName, setEditedName] = useState("");
   const [editedDescription, setEditedDescription] = useState("");
 
-  const handleTodoChange = (value) => setTodo(value);
-  const handleDescriptionChange = (value) => setDescription(value);
+  const inputsAreEmpty = name.trim() === "" || description.trim() === "";
 
-  const handleAddClick = () => {
-    const newTodo = {
-      id: todos.length + 10,
-      todo,
+  const handleNameChange = (value) => setName(value);
+  const handleDescription = (value) => setDescription(value);
+
+  const handleAddTodoClick = () => {
+    const newUser = {
+      id: new Date().getTime(),
+      name,
       description,
     };
-    setTodos([newTodo, ...todos]);
-    setTodo("");
+    setCards([newUser, ...cards]);
+    setName("");
     setDescription("");
   };
 
   const handleCloseClick = (id) => {
-    const FilteredTodos = todos.filter((todo) => todo.id !== id);
-    setTodos(FilteredTodos);
+    const filteredUsers = cards.filter((user) => user.id !== id);
+    setCards(filteredUsers);
+  };
+
+  const handleShowTodoEditClicked = (id) => {
+    setEditedId(id);
+
+    const editedUser = cards.find((user) => user.id === id);
+    setEditedName(editedUser.name);
+    setEditedDescription(editedUser.description);
+  };
+
+  const handleEditSaveClicked = (id) => {
+    const editedUsers = cards.map((user) => {
+      if (user.id === id) {
+        return {
+          ...user,
+          name: editedName,
+          description: editedDescription,
+        };
+      }
+      return user;
+    });
+    setCards(editedUsers);
+    setEditedId(0);
   };
 
   const renderTodoCards = () =>
-    todos.map(({ id, todo, description }) => (
-      <div
+    cards.map(({ id, name, description }) => (
+      <Card
         key={id}
         id={id}
-        todo={todo}
+        name={name}
         description={description}
         onCloseClick={() => handleCloseClick(id)}
-        editedTodo={editedTodo}
+        onEditClick={() => handleShowTodoEditClicked(id)}
+        onClick={() => handleShowTodoEditClicked(id)}
+        onEditSaveClick={() => handleEditSaveClicked(id)}
+        editedName={editedName}
         editedDescription={editedDescription}
         editedId={editedId}
-        setEditedTodo={setEditedTodo}
+        setEditedName={setEditedName}
         setEditedDescription={setEditedDescription}
-        setEditedId={setEditedId}
       />
     ));
+
   return (
     <div className="Layout">
       <h1>TODO List</h1>
       <div className="Form">
         <input
-          value={todo}
-          onChange={(event) => handleTodoChange(event.target.value)}
+          value={name}
+          onChange={(event) => handleNameChange(event.target.value)}
           className="Field"
           name="name"
-          placeholder="TODO"
+          placeholder="Enter TODO"
         />
         <textarea
           value={description}
-          onChange={(event) => handleDescriptionChange(event.target.value)}
+          onChange={(event) => handleDescription(event.target.value)}
           className="Field"
           name="description"
-          placeholder="Description"
+          placeholder="Describe TODO"
         ></textarea>
-        <button className="Button" onClick={handleAddClick}>
+        <button
+          disabled={inputsAreEmpty}
+          className="Button"
+          onClick={handleAddTodoClick}
+        >
           Add TODO
         </button>
       </div>
-      {renderTodoCards}
+      {renderTodoCards()}
     </div>
   );
 }

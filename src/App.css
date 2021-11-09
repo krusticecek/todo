@@ -1,22 +1,63 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Layout {
+  width: 60%;
+  margin: 5px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: Black;
+}
+.Field {
+  width: 200px;
+  min-height: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 5px;
+}
+textarea.Field {
+  width: 200%;
+  text-align: center;
+  min-height: 70px;
 }
 
-.App-link {
-  color: #09d3ac;
+.Form {
+  width: 50%;
+  margin-right: 20px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Button {
+  width: 200px;
+  min-height: 40px;
+  padding: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 4px 4px 0px #fdfdfd;
+}
+body {
+  background: linear-gradient(90deg, #ef7507, #e107ef);
+  background-size: auto;
+  animation: gradient-animation 2s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
