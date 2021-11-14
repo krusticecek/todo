@@ -1,10 +1,7 @@
-
 import { useState } from "react";
 import "./App.css";
 import ToDoData from "./mocks/todos.json";
 import Card from "./Components/Card";
-import { useState } from "React";
-
 
 function App() {
   const [cards, setCards] = useState(ToDoData);
@@ -99,19 +96,6 @@ function App() {
           disabled={inputsAreEmpty}
           className="Button"
           onClick={handleAddTodoClick}
-
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-
         >
           Add TODO
         </button>
